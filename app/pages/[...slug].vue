@@ -9,6 +9,15 @@ const navigation = inject('navigation')
 const subfolders = computed(() => (navigation.value ?? [])
   .toSorted(({ path: a }, { path: b }) => b.length - a.length)
   .find(({ path }) => route.path.startsWith(path))?.children ?? [])
+
+watch(page, (value) => {
+  if (!value && subfolders.value.length > 0) {
+    // goto first subpage
+    navigateTo(subfolders.value[0].path)
+  }
+}, {
+  immediate: true,
+})
 </script>
 
 <template>
