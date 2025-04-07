@@ -10,7 +10,7 @@ const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({
         :aspect-ratio="960 / 176"
       >
         <div class="d-flex flex-column justify-center fill-height">
-          <h1>NefroN</h1>
+          <nuxt-link to="/"><h1>NefroN</h1></nuxt-link>
           <p>Regionale Nierpatiënten Vereniging</p>
         </div>
       </v-responsive>
@@ -28,6 +28,10 @@ const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({
   header {
     background: url('~/assets/header.png') no-repeat center center;
     background-size: contain;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   h1 {
