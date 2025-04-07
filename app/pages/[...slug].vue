@@ -61,7 +61,7 @@ watch(page, (value) => {
 </template>
 
 <style scoped lang="scss">
-.content :deep {
+.content :deep([data-content-id]) {
   a {
     text-decoration: underline;
     color: red;
