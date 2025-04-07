@@ -1,0 +1,37 @@
+<script setup lang="ts">
+const navigation = inject('navigation')
+const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({ text: title, to: path })))
+</script>
+
+<template>
+  <v-container class="py-0 c-header">
+    <header>
+      <v-responsive
+        :aspect-ratio="960 / 176"
+      >
+        <div class="d-flex flex-column justify-center fill-height">
+          <h1>NefroN</h1>
+          <p>Regionale Nierpatiënten Vereniging</p>
+        </div>
+      </v-responsive>
+    </header>
+    <v-tabs
+      :items="tabs"
+      color="red"
+      class="my-5"
+    />
+  </v-container>
+</template>
+
+<style scoped lang="scss">
+.c-header {
+  header {
+    background: url('~/assets/header.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  h1 {
+    color: red;
+  }
+}
+</style>
