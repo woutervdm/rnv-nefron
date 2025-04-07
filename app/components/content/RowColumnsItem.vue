@@ -6,8 +6,8 @@ defineProps<{
 </script>
 
 <template>
-  <v-col class="d-flex flex-column justify-center align-center item">
-    <v-responsive :aspect-ratio="1">
+  <v-col class="item text-center">
+    <v-responsive :aspect-ratio="1" width="100%">
       <nuxt-img
         :src="img"
         :title="title"
@@ -26,7 +26,7 @@ defineProps<{
   h3 {
     line-height: 1.25em;
     min-height: 2.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.5em;
   }
 
   img {
