@@ -1,6 +1,11 @@
 <script setup lang="ts">
 const navigation = inject('navigation')
 const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({ text: title, to: path })))
+
+const config = useAppConfig()
+
+console.log(config)
+const { header } = config
 </script>
 
 <template>
@@ -20,6 +25,16 @@ const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({
       color="red"
       class="my-5"
     />
+    <div
+      v-if="header.marquee"
+      class="marquee"
+    >
+      <client-only>
+        <vue3-marquee>
+          {{ header.marquee }}
+        </vue3-marquee>
+      </client-only>
+    </div>
   </v-container>
 </template>
 
@@ -36,6 +51,11 @@ const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({
 
   h1 {
     color: red;
+  }
+
+  .marquee {
+    color: red;
+    min-height: 1.5em;
   }
 }
 </style>

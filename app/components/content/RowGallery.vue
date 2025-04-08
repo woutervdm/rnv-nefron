@@ -44,6 +44,13 @@ function open(index: number) {
         :src="images[zoomedImage]?.url"
       />
       <v-btn
+        icon="mdi-close"
+        location="right top"
+        position="absolute"
+        class="d-sm-none mt-5 mr-5"
+        @click="dialog = false"
+      />
+      <v-btn
         position="absolute"
         icon="mdi-arrow-left"
         location="left center"
@@ -69,7 +76,8 @@ function open(index: number) {
     <v-col
       v-for="(image, index) of images"
       :key="index"
-      cols="3"
+      cols="6"
+      sm="3"
     >
       <v-card
         @click="open(index)"

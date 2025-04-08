@@ -29,6 +29,9 @@ dependencies:
   vue-router:
     specifier: ^4.5.0
     version: 4.5.0(vue@3.5.13)
+  vue3-marquee:
+    specifier: ^4.2.2
+    version: 4.2.2(vue@3.5.13)
   vuetify:
     specifier: ^3.8.0
     version: 3.8.0(typescript@5.8.3)(vite-plugin-vuetify@2.1.1)(vue@3.5.13)
@@ -9054,6 +9057,15 @@ packages:
       vue: ^3.2.0
     dependencies:
       '@vue/devtools-api': 6.6.4
+      vue: 3.5.13(typescript@5.8.3)
+    dev: false
+
+  /vue3-marquee@4.2.2(vue@3.5.13):
+    resolution: {integrity: sha512-FeFvGUVInKfFilXFcnl8sDRBJBZCZSNLlQDquJErB9db6W2xICRVqbRV/jtdzsEP0rftarLQhx9MeEAU0+TPuQ==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      vue: ^3.2
+    dependencies:
       vue: 3.5.13(typescript@5.8.3)
     dev: false
 
