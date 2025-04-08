@@ -1,9 +1,11 @@
 <script setup lang="ts">
-defineProps<{
-  title: string
-  img: string
-  align: 'center' | 'start'
-}>()
+withDefaults(defineProps<{
+  title?: string
+  img?: string
+  align?: 'center' | 'start'
+}>(), {
+  align: 'start',
+})
 </script>
 
 <template>
