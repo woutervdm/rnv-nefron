@@ -2,10 +2,7 @@
 const navigation = inject('navigation')
 const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({ text: title, to: path })))
 
-const config = useAppConfig()
-
-console.log(config)
-const { header } = config
+const { header } = useAppConfig()
 </script>
 
 <template>

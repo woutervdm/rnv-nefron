@@ -61,25 +61,25 @@ watch(page, (value) => {
 </template>
 
 <style scoped lang="scss">
-.content :deep([data-content-id]) {
-  a {
+.content {
+  :deep(a) {
     text-decoration: underline;
     color: red;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  :deep(h1), :deep(h2), :deep(h3), :deep(h4), :deep(h5), :deep(h6) {
     color: red;
   }
 
-  p:not(:last-child) {
+  :deep(p:not(:last-child)) {
     margin-bottom: 1em;
   }
 
-  ul {
+  :deep(ul) {
     margin-bottom: 1em;
   }
 
-  li {
+  :deep(li) {
     list-style-position: inside;
   }
 }
