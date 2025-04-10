@@ -19,7 +19,9 @@ const images = computed(() => data.value?.map(url => ({
     height: 400,
     fit: 'cover',
   }),
-  url,
+  url: img(url, {
+    width: 1920,
+  }),
 })))
 
 const zoomedImage = ref<number>(0)
@@ -37,8 +39,13 @@ function open(index: number) {
   <v-dialog
     v-model="dialog"
     :fullscreen="xs"
+    @keydown.left.prevent="open(zoomedImage - 1)"
+    @keydown.right.prevent="open(zoomedImage + 1)"
   >
-    <v-card class="position-relative">
+    <v-card
+      color="transparent"
+      class="position-relative"
+    >
       <v-img
         v-if="images[zoomedImage]"
         :src="images[zoomedImage]?.url"
