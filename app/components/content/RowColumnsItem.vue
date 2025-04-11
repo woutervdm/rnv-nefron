@@ -9,7 +9,11 @@ withDefaults(defineProps<{
 </script>
 
 <template>
-  <v-col :class="`item text-${align}`">
+  <v-col
+    :class="`item text-${align}`"
+    cols="6"
+    sm="3"
+  >
     <v-responsive
       v-if="img"
       :aspect-ratio="1"
@@ -34,6 +38,7 @@ withDefaults(defineProps<{
     line-height: 1.25em;
     min-height: 2.5em;
     margin: 0.5em;
+    hyphens: auto;
   }
 
   img {

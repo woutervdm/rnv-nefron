@@ -4,6 +4,12 @@ const { data: navigation } = await useAsyncData('navigation', () => {
     .order('stem', 'ASC')
 })
 
+useHead({
+  htmlAttrs: {
+    lang: 'nl',
+  },
+})
+
 provide('navigation', navigation)
 </script>
 
