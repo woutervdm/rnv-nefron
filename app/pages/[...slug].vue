@@ -18,6 +18,10 @@ onMounted(() => {
     navigateTo(subfolders.value?.[0]?.path)
   }
 })
+
+function open(value: ContentNavigationItem | null) {
+  navigateTo(value?.path)
+}
 </script>
 
 <template>
@@ -47,7 +51,9 @@ onMounted(() => {
       >
         <v-select
           :items="subfolders"
-          :model-value="route.path"
+          :model-value="subfolders.find(({ path }) => route.path === path)"
+          return-object
+          @update:modelValue="open"
         />
       </v-col>
       <v-col class="content">
@@ -61,6 +67,9 @@ onMounted(() => {
 </template>
 
 <style scoped lang="scss">
+@use 'sass:map';
+@use 'vuetify/settings';
+
 .content {
   :deep(a) {
     text-decoration: underline;
@@ -81,6 +90,16 @@ onMounted(() => {
 
   :deep(li) {
     list-style-position: inside;
+  }
+
+  :deep(iframe) {
+    max-width: 100%;
+
+    @media #{map.get(settings.$display-breakpoints, 'xs')} {
+      max-width: calc(100% + 32px);
+      margin-left: -16px;
+      margin-right: -16px;
+    }
   }
 }
 </style>

@@ -11,8 +11,6 @@ withDefaults(defineProps<{
 <template>
   <v-col
     :class="`item text-${align}`"
-    cols="6"
-    sm="3"
   >
     <v-responsive
       v-if="img"
