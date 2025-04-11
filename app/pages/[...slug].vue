@@ -1,22 +1,22 @@
 <script setup lang="ts">
+import type { ContentNavigationItem } from '@nuxt/content'
+
 const route = useRoute()
 const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 
-const navigation = inject('navigation')
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
-const subfolders = computed(() => (navigation.value ?? [])
+const subfolders = computed(() => (navigation?.value ?? [])
   .toSorted(({ path: a }, { path: b }) => b.length - a.length)
   .find(({ path }) => route.path.startsWith(path))?.children ?? [])
 
-watch(page, (value) => {
-  if (!value && subfolders.value.length > 0) {
+onMounted(() => {
+  if (!page.value && subfolders.value.length > 0) {
     // goto first subpage
-    navigateTo(subfolders.value[0].path)
+    navigateTo(subfolders.value?.[0]?.path)
   }
-}, {
-  immediate: true,
 })
 </script>
 

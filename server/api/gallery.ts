@@ -10,7 +10,6 @@ export default defineEventHandler(async (event): Promise<string[]> => {
   }
 
   const path = resolve(process.cwd(), 'public/images/galleries', gallery.toString())
-  console.log({ path })
   return (await readdir(path))
     .filter(file => /\.(jpg|jpeg|png|gif)$/i.test(file))
     .map(file => `/images/galleries/${gallery}/${file}`)

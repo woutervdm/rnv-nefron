@@ -1,8 +1,12 @@
 <script setup lang="ts">
-const navigation = inject('navigation')
-const tabs = computed(() => (navigation.value ?? []).map(({ title, path }) => ({ text: title, to: path })))
+import type { ContentNavigationItem } from '@nuxt/content'
+
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
+const tabs = computed(() => (navigation?.value ?? []).map(({ title, path }) => ({ text: title, to: path })))
 
 const { header } = useAppConfig()
+
+const Vue3Marquee = defineAsyncComponent(async () => (await import('vue3-marquee')).Vue3Marquee)
 </script>
 
 <template>
