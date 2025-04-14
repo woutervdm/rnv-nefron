@@ -25,6 +25,7 @@ const Vue3Marquee = defineAsyncComponent(async () => (await import('vue3-marquee
       :items="tabs"
       color="red"
       class="my-5"
+      show-arrows
     />
     <div
       v-if="header.marquee"

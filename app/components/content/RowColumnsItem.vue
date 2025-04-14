@@ -6,11 +6,16 @@ withDefaults(defineProps<{
 }>(), {
   align: 'start',
 })
+
+const cols = inject<number | undefined>('cols')
+const sm = inject<number | undefined>('sm')
 </script>
 
 <template>
   <v-col
     :class="`item text-${align}`"
+    :cols="cols"
+    :sm="sm"
   >
     <v-responsive
       v-if="img"
