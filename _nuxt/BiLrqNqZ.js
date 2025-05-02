@@ -1,1 +1,0 @@
-import{j as o,c as s,i as r,a8 as c}from"./DjYK_DP8.js";const n={};function t(e,a){return r(),s("code",null,[c(e.$slots,"default")])}const _=Object.assign(o(n,[["render",t]]),{__name:"ProseCode"});export{_ as default};
