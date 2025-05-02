@@ -1,0 +1,361 @@
+<!DOCTYPE html><html  lang="nl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" type="text/css" crossorigin="anonymous" data-hid="mdi"><style id="vuetify-theme-stylesheet">:root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 24,103,192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 24,103,192;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 204,191,214;
+      --v-theme-surface-bright-overlay-multiplier: 2;
+      --v-theme-surface-light: 66,66,66;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 200,200,200;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 0,0,0;
+      --v-theme-primary: 33,150,243;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 39,124,193;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 84,182,178;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 72,169,166;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 1;
+      --v-medium-emphasis-opacity: 0.7;
+      --v-disabled-opacity: 0.5;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-bright {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-bright)) !important;
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .bg-surface-light {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-light-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-light)) !important;
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-bright {
+      color: rgb(var(--v-theme-surface-bright)) !important;
+    }
+    .border-surface-bright {
+      --v-border-color: var(--v-theme-surface-bright);
+    }
+    .text-surface-light {
+      color: rgb(var(--v-theme-surface-light)) !important;
+    }
+    .border-surface-light {
+      --v-border-color: var(--v-theme-surface-light);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-surface-bright {
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .on-surface-light {
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+</style><style>.c-header header[data-v-0e21ca0a]{background:url(/_nuxt/header.D7Z-_FOk.png) no-repeat 50%;background-size:contain}.c-header a[data-v-0e21ca0a]{text-decoration:none}.c-header h1[data-v-0e21ca0a]{color:red}.c-header .marquee[data-v-0e21ca0a]{color:red;min-height:1.5em}</style><style>.content[data-v-6b4c8543] a{color:red;text-decoration:underline}.content[data-v-6b4c8543] h1,.content[data-v-6b4c8543] h2,.content[data-v-6b4c8543] h3,.content[data-v-6b4c8543] h4,.content[data-v-6b4c8543] h5,.content[data-v-6b4c8543] h6{color:red}.content[data-v-6b4c8543] p:not(:last-child){margin-bottom:1em}.content[data-v-6b4c8543] ul{margin-bottom:1em}.content[data-v-6b4c8543] li{list-style-position:inside}.content[data-v-6b4c8543] iframe{max-width:100%}@media (max-width:599.98px){.content[data-v-6b4c8543] iframe{margin-left:-16px;margin-right:-16px;max-width:calc(100% + 32px)}}</style><link rel="stylesheet" href="/_nuxt/entry.GW0WrMog.css" crossorigin><link rel="preload" as="fetch" crossorigin="anonymous" href="/brochure/_payload.json?b2e31a80-1ae4-4348-ab1f-36709bd192b2"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DjYK_DP8.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/D5GaXLs6.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Bt65tbcQ.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BNEIQQ5S.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/E8Hhf994.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/Dl_bnFle.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BXIEJuQi.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/nFzYcuOI.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/_nuxt/builds/meta/b2e31a80-1ae4-4348-ab1f-36709bd192b2.json"><link rel="prefetch" as="image" type="image/png" href="/_nuxt/header.D7Z-_FOk.png"><link rel="prefetch" as="style" crossorigin href="/_nuxt/_...C0ajyUzY.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/B7C9mw1z.js"><link rel="prefetch" as="style" crossorigin href="/_nuxt/index.CulOtT1v.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/Bo6mumwu.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/CZFBmob4.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/BQXApyCg.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/HoHyabFU.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/tPHgwGN3.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/DnVsYHAL.js"><script type="module" src="/_nuxt/DjYK_DP8.js" crossorigin></script></head><body><div id="__nuxt"><div class="v-application v-theme--light v-layout v-layout--full-height v-locale--is-ltr" style=""><div class="v-application__wrap"><!--[--><div class="v-container v-locale--is-ltr py-0 c-header" style="" data-v-0e21ca0a><header data-v-0e21ca0a><div class="v-responsive" style="" data-v-0e21ca0a><div class="v-responsive__sizer" style="padding-bottom:18.333333333333336%;"></div><!----><div class="v-responsive__content"><!--[--><div class="d-flex flex-column justify-center fill-height" data-v-0e21ca0a><a href="/" class="" data-v-0e21ca0a><h1 data-v-0e21ca0a>NefroN</h1></a><p data-v-0e21ca0a>Regionale Nierpatiënten Vereniging</p></div><!--]--></div></div></header><!--[--><div class="v-slide-group v-slide-group--mobile v-tabs v-tabs--horizontal v-tabs--align-tabs-start v-tabs--density-default my-5" style="" tabindex="0" role="tablist" data-v-0e21ca0a><!----><div class="v-slide-group__container"><div class="v-slide-group__content"><!--[--><!--[--><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/nvn" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->NVN<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Home<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/bestuur" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Bestuur<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light text-red v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/brochure" aria-current="page" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Brochure<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/nieuwsbrief" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Nieuwsbrief<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/activiteiten" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Activiteiten<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/links" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Links<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/contact" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Contact<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><a class="v-btn v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-text v-tab" style="" tabindex="-1" href="/privacy-statement" role="tab" aria-selected="false"><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><!--[-->Privacy statement<div class="v-tab__slider" style=""></div><!--]--><!--]--><!--]--></span><!----><!----></a><!--]--><!--]--></div></div><!----></div><div class="v-window v-theme--light v-tabs-window" style="" data-v-0e21ca0a><div class="v-window__container" style=""><!--[--><!--[--><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><div class="v-window-item v-tabs-window-item" style="display:none;" disabled><!----></div><!--]--><!----><!--]--><!----></div><!----></div><!--]--><div class="marquee" data-v-0e21ca0a><span data-v-0e21ca0a></span></div></div><div class="v-container v-locale--is-ltr fill-height align-start" style="" data-v-6b4c8543><div class="v-row" style="" data-v-6b4c8543><!----><!----><div class="v-col content" style="" data-v-6b4c8543><div data-v-6b4c8543><h1 id="brochure"><!--[-->Brochure<!--]--></h1><h2 id="inleiding"><!--[-->Inleiding<!--]--></h2><p><!--[-->De vereniging stelt zich ten doel de belangen van nierpatiënten te behartigen, als schakel tussen de afdelingen nierziekten en de patiënt. Daarnaast heeft de vereniging tot doel om de nierpatienten onderling met elkaar in contact te brengen door lotgenotencontact. Tot slot vormt informatie aan nierpatiënten een belangrijk onderdeel van onze doelstelling.<br>
+Op 10 oktober 1989 hebben enkele patiënten de vereniging opgericht. De vereniging is bedoeld voor alle (pré) dialysepatiënten en getransplanteerden van het Catharina Ziekenhuis en het Elkerliek ziekenhuis en hun naasten en donoren.<!--]--></p><p><!--[-->De vereniging bestaat uit een bestuur van maximaal 7personen en heeft een ledenbestand van circa 190 leden.<!--]--></p><h2 id="doel-van-de-vereniging-activiteiten-van-de-vereniging"><!--[-->Doel van de vereniging, Activiteiten van de vereniging:<!--]--></h2><ol><!--[--><li><!--[-->Lotgenotencontact:<!--]--></li><!--]--></ol><ul><!--[--><li><!--[-->Ontmoeting en ontspanning<!--]--></li><li><!--[-->Uitwisselen van ervaringen<!--]--></li><li><!--[-->Verzorgen van attenties<!--]--></li><!--]--></ul><ol start="2"><!--[--><li><!--[-->Voorlichting:<!--]--></li><!--]--></ol><ul><!--[--><li><!--[-->Themabijeenkomsten<!--]--></li><li><!--[-->Informatie voor nierpatiënten en hun omgeving<!--]--></li><!--]--></ul><ol start="3"><!--[--><li><!--[-->Belangenbehartiging<!--]--></li><!--]--></ol><ul><!--[--><li><!--[-->Vertegenwoordiging patiënten binnen en buiten het ziekenhuis<!--]--></li><li><!--[-->Contacten en overleg met betrokken instanties<!--]--></li><!--]--></ul><ol start="4"><!--[--><li><!--[-->Samenwerking met Nederlandse Nierstichting (NSN), Nierpatiëntenvereniging Nederland(NVN) en andere Regionale Nierpatiëntenverenigingen (RNV&#39;s)<!--]--></li><!--]--></ol><ul><!--[--><li><!--[-->o.a. deelname aan fondsenwerfacties van de  NSN<!--]--></li><!--]--></ul><ol start="5"><!--[--><li><!--[-->Organisatie en ontwikkeling van de vereniging<!--]--></li><!--]--></ol><ul><!--[--><li><!--[-->o.a. aanvraag en verantwoording subsidie bij de NSN<!--]--></li><!--]--></ul><h2 id="wij-staan-voor"><!--[-->Wij staan voor:<!--]--></h2><p><!--[-->De vereniging organiseert meerder keren per jaar activiteiten bijvoorbeeld: gezellige middagen b.v. casinospelen, kegelen, kienen en midgetgolven Ook organiseren we jaarlijks een dagtocht en zondags voor kerst een eindejaarsbijeenkomst. Ook gaan we met Sinterklaas en Pasen rond op de afdelingen met een tractatie en een kleine attentie, gezellige activiteiten op de dialyse afdeling. <br>
+Daarnaast organsiren we themadagen. Dat proberen we samen te doen met de afdelingen en/of met de NVN en andere RNV&#39;s.<br>
+Bovendien heeft de vereniging regelmatig overleg met de teamleiding van de dialyseafdeling en is er ook overleg en samenwerking met andere patiëntenverenigingen&gt;<br>
+Informatie verspreiden we via onze dreimaandelijkse nieuwsbrief en via onze website<!--]--></p><h2 id="andere-verenigingen-voor-patiënten"><!--[-->Andere verenigingen voor patiënten:<!--]--></h2><p><!--[-->De meeste dialysecentra in ons land hebben een eigen nierpatiëntenvereniging. Naast deze regionale verenigingen is er de landelijke Nierpatiëntenvereniging (NVN). Dit is een organisatie opgericht door patiënten, die de belangen van de nierpatiënten en van de verenigingen behartigt. Daarnaast is er de bekende Nierstichting Nederland, die landelijk nierpatiënten en het &quot;publiek&quot; voorlichting geeft en fondsen werft ten behoeve van onder andere wetenschappelijk onderzoek. Financiën van de vereniging: De patiëntenvereniging is in haar bestaan financieel afhankelijk van subsidie van de NSN en van persoonlijke giften. De leden betalen een zo laag mogelijke contributie, omdat de patiëntenvereniging geen financiële drempel wil opwerpen, waardoor mensen hierdoor af zouden zien van het lidmaatschap. Van de contributie draagt de verenging ook een deel af aan de landelijke Nierpatiëntenvereniging (NVN), waardoor iedereen tegen een geringe extra bijdrage  kan zijn ook lid  van de NVN en bijvoorbeeld het tweemaandelijks blad &quot;Wisselwerking&quot; ontvangt. Voor het organiseren van activiteiten en het geven van voorlichting en ondersteuning is geld nodig. Donatie en giften van familieleden, vrienden, kennissen of anderen, zijn dan ook broodnodig om onze vereniging draaiende te houden.<!--]--></p><h2 id="contributie"><!--[-->Contributie<!--]--></h2><p><!--[-->De contributie bedraagt € 20 per jaar voor alleen lidmaatschap van NefroN of € 25 voor lidmaatschap van NefroN en de NVN samen( 13.74.25.813 )<br>
+De contributie voor een partener bedraagt € 6,25 per jaar<!--]--></p><p><!--[-->Informeer bij uw verzekering of zij het lidmaatschap vergoeden ( een aantal verzekeringspolissen dekken de contributie van één vereniging )<!--]--></p><p><!--[--><strong><!--[-->Voor meer informatie kunt u contact opnemen met de secretaris en of andere bestuursleden<!--]--></strong><!--]--></p></div></div></div></div><div class="v-container v-locale--is-ltr text-center" style=""> Wij danken onze sponsors: <a href="http://www.nierstichting.nl/">De Nierstichting</a> - en <a href="https://softmedia.nl/">Softmedia</a>, de maker en host van onze site, voor hun bijdrage </div><!--]--></div></div></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/brochure/_payload.json?b2e31a80-1ae4-4348-ab1f-36709bd192b2">[{"state":1,"once":3,"_errors":4,"serverRendered":6,"path":7,"prerenderedAt":8},["Reactive",2],{},["Set"],["ShallowReactive",5],{"navigation":-1,"/brochure":-1},true,"/brochure",1746164882308]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{content:{wsUrl:""},mdc:{components:{prose:true,map:{}},headings:{anchorLinks:false}},preview:{api:"https://api.nuxt.studio",iframeMessagingAllowedOrigins:""}},app:{baseURL:"/",buildId:"b2e31a80-1ae4-4348-ab1f-36709bd192b2",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>
