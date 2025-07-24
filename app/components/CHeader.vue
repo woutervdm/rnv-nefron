@@ -5,13 +5,17 @@ const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 const tabs = computed(() => (navigation?.value ?? []).map(({ title, path }) => ({ text: title, to: path })))
 
 const { header } = useAppConfig()
+const img = useImage()
 
 const Vue3Marquee = defineAsyncComponent(async () => (await import('vue3-marquee')).Vue3Marquee)
+const backgroundImage = computed(() => img('/header.png', {
+  format: 'webp',
+}))
 </script>
 
 <template>
   <v-container class="py-0 c-header">
-    <header>
+    <header :style="{ backgroundImage: `url('${backgroundImage}')` }">
       <v-responsive
         :aspect-ratio="960 / 176"
       >
@@ -43,7 +47,7 @@ const Vue3Marquee = defineAsyncComponent(async () => (await import('vue3-marquee
 <style scoped lang="scss">
 .c-header {
   header {
-    background: url('~/assets/header.png') no-repeat center center;
+    background: no-repeat center center;
     background-size: contain;
   }
 
