@@ -1,1 +1,0 @@
-import{_ as s,d as r,i as n,a8 as o}from"./CKPt9T7S.js";const t={};function a(e,c){return n(),r("li",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",a]]),{__name:"ProseLi"});export{_ as default};
