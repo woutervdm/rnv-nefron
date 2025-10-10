@@ -30,7 +30,9 @@ const sm = inject<number | undefined>('sm')
         fit="cover"
       />
     </v-responsive>
-    <h3 v-if="title">{{ title }}</h3>
+    <h3 v-if="title">
+      {{ title }}
+    </h3>
     <slot />
   </v-col>
 </template>

@@ -1,5 +1,5 @@
 import { readdir } from 'node:fs/promises'
-import { join, resolve } from 'node:path'
+import { resolve } from 'node:path'
 
 export default defineEventHandler(async (event): Promise<string[]> => {
   const gallery = getQuery(event).gallery?.toString() ?? ''

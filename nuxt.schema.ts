@@ -12,7 +12,7 @@ export default defineNuxtSchema({
           title: 'Marquee',
           default: '',
         }),
-      }
-    })
-  }
+      },
+    }),
+  },
 })

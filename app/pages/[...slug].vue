@@ -53,7 +53,7 @@ function open(value: ContentNavigationItem | null) {
           :items="subfolders"
           :model-value="subfolders.find(({ path }) => route.path === path)"
           return-object
-          @update:modelValue="open"
+          @update:model-value="open"
         />
       </v-col>
       <v-col class="content">

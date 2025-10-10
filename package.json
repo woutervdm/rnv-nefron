@@ -10,21 +10,22 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/content": "3.6.3",
-    "@nuxt/eslint": "^1.7.1",
-    "@nuxt/image": "^1.10.0",
-    "better-sqlite3": "^12.2.0",
-    "eslint": "^9.31.0",
-    "nuxt": "^4.0.1",
-    "sass-embedded": "^1.89.2",
-    "vue": "^3.5.18",
+    "@nuxt/content": "3.7.1",
+    "@nuxt/eslint": "^1.9.0",
+    "@nuxt/image": "^1.11.0",
+    "better-sqlite3": "^12.4.1",
+    "eslint": "^9.37.0",
+    "nuxt": "^4.1.3",
+    "sass-embedded": "^1.93.2",
+    "vue": "^3.5.22",
     "vue-router": "^4.5.1",
     "vue3-marquee": "^4.2.2",
-    "vuetify": "^3.9.2",
+    "vuetify": "^3.10.5",
     "vuetify-nuxt-module": "^0.18.7"
   },
   "devDependencies": {
-    "@types/node": "^24.1.0"
+    "@types/node": "^24.7.1",
+    "typescript": "^5.9.3"
   },
   "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
 }
