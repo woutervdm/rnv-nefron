@@ -6,6 +6,10 @@ const { data: page } = await useAsyncData(route.path, () => {
   return queryCollection('content').path(route.path).first()
 })
 
+useHead({
+  title: [page.value?.title, 'RNV NefroN'].join(' - '),
+})
+
 const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 
 const subfolders = computed(() => (navigation?.value ?? [])
