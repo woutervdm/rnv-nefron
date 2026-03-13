@@ -14,10 +14,14 @@ export default defineNuxtConfig({
       anchorLinks: false,
     },
   },
-  future: {
-    compatibilityVersion: 4,
+  compatibilityDate: '2026-03-13',
+  vite: {
+    optimizeDeps: {
+      include: [
+        'vue3-marquee',
+      ],
+    },
   },
-  compatibilityDate: '2025-04-11',
   eslint: {
     config: {
       stylistic: true,
