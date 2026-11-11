@@ -4,6 +4,7 @@ import { defineNuxtConfig } from 'nuxt/config'
 export default defineNuxtConfig({
   modules: [
     '@nuxt/content',
+    'nuxt-studio',
     '@nuxt/eslint',
     'vuetify-nuxt-module',
     '@nuxt/image',
@@ -25,6 +26,19 @@ export default defineNuxtConfig({
   eslint: {
     config: {
       stylistic: true,
+    },
+  },
+  studio: {
+    route: '/_studio',
+  },
+  vuetify: {
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: 'light',
+      },
+    },
+    moduleOptions: {
+      prefixComposables: ['useLayout'],
     },
   },
 })
