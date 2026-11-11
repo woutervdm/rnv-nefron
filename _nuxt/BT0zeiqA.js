@@ -1,0 +1,1 @@
+import{U as e,h as t,z as n}from"./BNUZuTds.js";import{f as r}from"#entry";var i={};function a(r,i){return n(),t(`tr`,null,[e(r.$slots,`default`)])}var o=Object.assign(r(i,[[`render`,a]]),{__name:`ProseTr`});export{o as default};

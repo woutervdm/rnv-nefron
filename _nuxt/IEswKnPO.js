@@ -1,0 +1,1 @@
+import{_t as e}from"./BNUZuTds.js";import{_ as t,h as n}from"./R9leIpxv.js";var r=[null,`default`,`comfortable`,`compact`],i=t({density:{type:String,default:`default`,validator:e=>r.includes(e)}},`density`);function a(t,r=n()){return{densityClasses:e(()=>`${r}--density-${t.density}`)}}export{a as n,i as t};
